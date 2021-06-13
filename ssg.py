@@ -1,7 +1,7 @@
 import typer 
 from ssg.site import Site
 
-def main(source="contents", dest="dist"):
+def main(source="content", dest="dist"):
     config = {
         "source": source,
         "dest": dest
@@ -9,4 +9,4 @@ def main(source="contents", dest="dist"):
     
     Site(**config).build()
 
-typer(main)
+typer.run(main)
