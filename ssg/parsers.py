@@ -24,7 +24,7 @@ class Parser:
             file.write(content)
     
     def copy(self, path, source, dest):
-        path.copy2(self.dest / path.relative_to(self.source))
+        shutil.copy2(dest / path.relative_to(source))
     
     
     class ResourceParser(Parser):
