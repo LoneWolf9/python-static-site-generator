@@ -3,7 +3,7 @@ from ssg.site import Site
 
 def main(source="contents", dest="dist"):
     config = {
-        "source": source
+        "source": source,
         "dest": dest
     }
     
