@@ -10,7 +10,7 @@ class Parser:
     extensions.List[str]
     
     def valid_extension(self, extension):
-        return for extension in self.extensions
+        return extensions[extension]
     
     def parse(self, path, source, dest):
         self.path = Path(path)
