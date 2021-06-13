@@ -6,8 +6,7 @@ from pathlib import Path
 
 class Parser:
     
-    extensions = []
-    extensions.List[str]
+    extensions = [].List[str]
     
     def valid_extension(self, extension):
         return extensions[extension]
