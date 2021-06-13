@@ -1,6 +1,6 @@
 import typer 
 
-from ssg.parsers import *
+import ssg.parsers
 
 from ssg.site import Site
 
