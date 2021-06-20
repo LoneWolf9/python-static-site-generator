@@ -50,5 +50,5 @@ class MarkdownParser(Parser):
             path.name, content))
 
 
-class RestructuredTextParser(Parser):
+class ReStructuredTextParser(Parser):
     extensions = [".rst"]
