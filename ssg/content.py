@@ -31,5 +31,3 @@ class Content(Mapping):
 
     def set_type(self, x):
         self.data["type"] = x
-
-    def
