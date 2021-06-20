@@ -10,7 +10,17 @@ class Content(Mapping):
     __delimeter = "^(?:-/\+){3}\s*$"
     __regex = re.compile(__delimiter, re.MULTILINE)
 
-    def load(self):
-        _ = __regex.split('', 2)
-        fm = __regex.split('', 2)
-        content = __regex.split('', 2)
+    def load(self, cls):
+        _, fm, content = cls.__regex.split(string, 2)
+        metadata = load(fm, Loader=FullLoader)
+        return cls(metadata, content)
+
+    def __init__(self, metadata, content):
+        data = metadata
+        self.data = {
+            "content": content
+        }
+
+    @property
+    def body(self):
+        return self.data["content"]
