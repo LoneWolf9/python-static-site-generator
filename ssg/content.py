@@ -7,7 +7,7 @@ from collections.abc import Mapping
 
 class Content(Mapping):
 
-    __delimeter = "^(?:-/\+){3}\s*$"
+    __delimiter = "^(?:-|\+){3}\s*$"
     __regex = re.compile(__delimiter, re.MULTILINE)
 
     def load(self, cls):
@@ -24,3 +24,12 @@ class Content(Mapping):
     @property
     def body(self):
         return self.data["content"]
+
+    @property
+    def type(self):
+        return self.data["type"] if "type" in self.data else None
+
+    def set_type(self, x):
+        self.data["type"] = x
+
+    def
